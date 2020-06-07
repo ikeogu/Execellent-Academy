@@ -17,17 +17,17 @@
             <div class="address my-4">
               <h4 class="footer-header">Address</h4>
               <ul>
-                <li>UGC Micro and Nanotechnology Centre ugc campus, Pacific University
-                  2345 Southern Road
-                  State Highway, Southbound 5712
-                  Australia</li>
+                <li>EXCELLENT ACADEMIC RESEARCH CONCEPTS NIGERIA LIMITED
+                  CHOBA EXTENSION BY UPTH JUNCTION BY T & C RESTAUARANT CLOSE
+                  EAST - WEST ROAD, PORT HARCOURT, RIVERS STATE</li>
               </ul>
             </div>
             <div class="contact">
               <h4 class="footer-header">Contact Information</h4>
               <ul>
-                <li><i class="fas fa-phone icon"></i> <i><span>+234 5058403879</span></i> </li>
-                <li><i class="fas fa-envelope icon"></i> <i><span>example@mail.com</span></i></li>
+                <li>Dr Ifeanyi Nwaeboh  <br> <i class="fas fa-phone icon"></i> <span>08035319326, 09039989994, 08089900094</span> </li>
+                <li>Elder Godwin Ichendu <br> <i class="fas fa-phone icon"></i> <span>09067825099, 08072131180,08094459234</span> </li>
+                <li> <i class="fas fa-envelope icon"></i> excellentacademicconcepts@gmail.com</li>
               </ul>
             </div>
           </div>

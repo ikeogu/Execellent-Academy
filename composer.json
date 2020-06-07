@@ -10,9 +10,11 @@
     "require": {
         "php": "^7.2",
         "fideloper/proxy": "^4.0",
-        
         "laravel/framework": "^6.0",
-        "laravel/tinker": "^2.0"
+        "laravel/tinker": "^2.0",
+        "niklasravnsborg/laravel-pdf": "^4.0",
+        "unicodeveloper/laravel-paystack": "^1.0",
+        "unisharp/laravel-filemanager": "~1.8"
     },
     "require-dev": {
         "facade/ignition": "^1.4",

@@ -39,7 +39,13 @@
                 <td>{{$a->title}}</td>
                     <td>{{$a->author_name}}</td>
                     <td>{{$a->no_pages}}</td>
-                    <td>{{$a->journal->abbr}}</td>
+                    <td>
+                        @if($a->journal_id == 20)
+                            Publish for Book
+                        @else
+                            {{$a->journal->abbr}}
+                        @endif
+                    </td>
                     <td>{{$a->created_at->diffForHumans()}}</td>
                     <td><a class="btn btn-primary" href="{{route('readBook',[$a->id])}}">view</a> 
                     <form action="{{ route('article.destroy' , $a->id)}}" method="POST">

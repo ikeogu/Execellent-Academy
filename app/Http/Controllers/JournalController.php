@@ -15,10 +15,7 @@ class JournalController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function __construct()
-    {
-        $this->middleware('auth')->except(['start','show','index']);
-    }
+    
     public function index()
     {
         //

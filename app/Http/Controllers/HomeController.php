@@ -26,9 +26,8 @@ class HomeController extends Controller
     public function index()
     {
         if(auth()->user()->isAdmin == 1){
-            $category = Category::all();
-            $journal = Journal::all();
-        return view('journal/create',['journal'=>$journal,'category'=>$category]);
+           
+            return redirect(route('dashboard'));
             
         }
         

@@ -713,6 +713,9 @@ Book Page */
 .books .left-line {
 	border-left: solid 1px #333;
 }
+.books .right-line {
+	border-right: solid 1px #333;
+}
 .books .bottom-line {
 	border-top: solid 1px #333;
 }

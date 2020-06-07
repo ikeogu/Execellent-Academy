@@ -12,26 +12,7 @@
   <section class="section section-center">
     <div class="container">
       <div class="row">
-        {{-- <div class="col-md-4 col-10 mx-auto">
-          <div class="contact-address mt-5">
-            <div class="address my-4">
-              <h4 class="footer-header">Address</h4>
-              <ul>
-                <li>UGC Micro and Nanotechnology Centre ugc campus, Pacific University
-                  2345 Southern Road
-                  State Highway, Southbound 5712
-                  Australia</li>
-              </ul>
-            </div>
-            <div class="contact">
-              <h4 class="footer-header">Contact Information</h4>
-              <ul>
-                <li><i class="fas fa-phone icon"></i> <i><span>+234 5058403879</span></i> </li>
-                <li><i class="fas fa-envelope icon"></i> <i><span>example@mail.com</span></i></li>
-              </ul>
-            </div>
-          </div>
-        </div> --}}
+      
         <div class="col-md-9 col-10 mx-auto">
           <div class="form">
             <h4 class="title">Manuscript</h4>
@@ -83,6 +64,7 @@
                 <label for="des">Journal</label>
                 <select class="form-control" name="journal_id">
                     <option>Choose Journal</option>
+                    <option value="20">Article for Book</option>
                     @foreach($journal as $j)
                 <option value="{{$j->id}}">{{$j->name}}</option>
                 @endforeach

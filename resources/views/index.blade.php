@@ -10,27 +10,27 @@
           <img src="{{asset('img/slider/slide_1.jpg')}}" class="d-block w-100 img-fluid" alt="...">
           <div class="overlay"></div>
           <div class="carousel-caption">
-            <h1 class="slider-hea">When it all began</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-            <a href="#" class="view-all">Read more</a>
+            <h1 class="slider-hea">Research is an organized method</h1>
+            <p>of trying to find out what you are going to do after you cannot do what you are doing now</p>
+            
           </div>
         </div>
         <div class="carousel-item">
           <img src="{{asset('img/slider/slide_2.jpg')}}" class="d-block w-100" alt="...">
           <div class="overlay"></div>
           <div class="carousel-caption d-none d-md-block">
-            <h1 class="slider-hea">When it all began</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, vel.</p>
-            <a href="#" class="">Read more</a>
+            <h1 class="slider-hea">No research is ever quite complete.</h1>
+            <p>The common facts of today are the products of yesterday's research</p>
+            
           </div>
         </div>
         <div class="carousel-item">
           <img src="{{asset('img/slider/slide_3.jpg')}}" class="d-block w-100" alt="...">
           <div class="overlay"></div>
           <div class="carousel-caption d-none d-md-block">
-            <h1 class="slider-hea">When it all began</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, vel.</p>
-            <a href="#" class="view-all">Read more</a>
+            <h1 class="slider-hea">Research teaches a man</h1> 
+            <p>to admit he is wrong and to be proud of the fact that he does so, rather than try with all his energy to defend an unsound plan because he is afraid that admission of error is a confession of weakness when rather it is a sign of strength.</p>
+            
           </div>
         </div>
       </div>

@@ -5,7 +5,12 @@ namespace App\Http\Controllers;
 use App\Published;
 use App\Journal;
 use App\Category;
+
+use Notification;
+use App\Mail\PublishedMail;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\URL;
 
 class PublishedController extends Controller
 {
@@ -14,10 +19,7 @@ class PublishedController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function __construct()
-    {
-        $this->middleware('auth')->except(['show']);
-    }
+   
     public function index()
     {
         //
@@ -84,18 +86,18 @@ class PublishedController extends Controller
     $publish->filename = $fileNameToSave;
 
     if($publish->save()){
-    //    send mail to author
-    // $data = [
-    //     'email' => $publish->author_email,
-    //     'subject' => "Article has been Published.",
-    //     'title' => $paper->title,
-    //     'url' =>  URL::signedRoute('artpub',  ['id'=> $publish->id]),
-    //     'name' => $paper->firstname + $paper->lastname
-    // ];
+       //send mail to author
+        $data = [
+            'email' => $publish->author_email,
+            'subject' => "Article has been Published.",
+            'title' => $publish->title,
+            'url' =>  URL::signedRoute('artpub',  ['id'=> $publish->id]),
+            'name' => $publish->author_name,
+        ];
 
-    // Mail::to($publish->authors_email)->send(new ArticlePublished($data)); 
-        return redirect(route('publish.index'))->with('success', "Article has been Published");
-    }
+        Mail::to($publish->author_email)->send(new Published($data)); 
+            return redirect(route('publish.index'))->with('success', "Article has been Published");
+        }
     }
 
     /**

@@ -6,7 +6,9 @@ use App\Article;
 use App\Journal;
 use App\Category;
 use Illuminate\Http\Request;
-
+use App\Mail\RecievedMail;
+use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\URL;
 class ArticleController extends Controller
 {
     /**
@@ -14,10 +16,7 @@ class ArticleController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function __construct()
-    {
-        $this->middleware('auth')->except(['create','store',]);
-    }
+    
     public function index()
     {
         //
@@ -82,7 +81,17 @@ class ArticleController extends Controller
     $publish->filename = $fileNameToSave;
 
     if($publish->save()){
-        return back()->with('success','Article is submitted. Admin will get to you!');
+        $data = [
+            'email' => $publish->author_email,
+            'subject' => "we have received your research article which shall be vetted and sent back to you for necessary corrections. We expect you to resend it to us  for publication after effecting the corrections. Thanks.",
+            'title' => $publish->title,
+            // 'url' =>  URL::signedRoute('artpub',  ['id'=> $publish->id]),
+            'name' => $publish->author_name,
+        ];
+
+        Mail::to($publish->author_email)->send(new ReceivedMail($data)); 
+        
+        return back()->with('success','Article is submitted. We will get to you!');
     }
 
     }

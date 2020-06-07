@@ -7,10 +7,7 @@ use App\Contact;
 
 class ContactController extends Controller
 {
-    public function __construct()
-    {
-        $this->middleware('auth')->except(['create']);
-    }
+    
     public function index(){
         $msg = Contact::all();
         return view('contact/index');

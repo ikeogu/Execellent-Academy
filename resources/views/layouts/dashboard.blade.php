@@ -41,10 +41,7 @@
                         <div class="col-md-6">
                             <h3><span class="glyphicon glyphicon-cog" aria-hidden="true"></span>Dashboard <small> Manage your site</small></h3>
                             <div class="dropdown create">
-                            <a class="btn btn-danger " href="{{Auth::logout()}}" >
-                                Logout
-                                <span class="caret"></span>
-                              </a>
+                              <a href="{{ route('logout') }} " type="button" class="btn btn-danger">Logout</a>
                               
                             </div>
                         </div>
@@ -142,54 +139,22 @@
                               <a href="index.html" class="list-group-item active main-color-bg">
                                 <span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Dashboard
                               </a>
-                              <a href="{{route('category.index')}}" class="list-group-item"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> All Categories <span class="badge"></span></a>
-                            <a href="{{route('journal.create')}}" class="list-group-item"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> All Journals <span class="badge"></span></a>
-                            <a href="{{route('publish.index')}}" class="list-group-item"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Published Articles <span class="badge"></span></a>
-                            <a href="{{route('article.index')}}" class="list-group-item"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Recieved Articles <span class="badge"></span></a>
-                            <a href="{{route('event.create')}}" class="list-group-item"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> All Events <span class="badge"></span></a>
+                              <a href="{{route('category.index')}}" class="list-group-item"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> All Categories <span class="badge">{{App\Category::count()}}</span></a>
+                            <a href="{{route('journal.create')}}" class="list-group-item"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> All Journals <span class="badge">{{App\Journal::count()}}</span></a>
+                            <a href="{{route('publish.index')}}" class="list-group-item"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Published Articles <span class="badge">{{App\Published::count()}}</span></a>
+                            <a href="{{route('article.index')}}" class="list-group-item"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Recieved Articles <span class="badge">{{App\Article::count()}}</span></a>
+                            <a href="{{route('event.create')}}" class="list-group-item"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> All Events <span class="badge">{{App\Event::count()}}</span></a>
                             <a href="{{route('about.create')}}" class="list-group-item"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> About us <span class="badge"></span></a>
-
-                              <a href="users.html" class="list-group-item"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> User <span class="badge">503</span></a>
+                            <a href="{{route('book.create')}}" class="list-group-item"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Books in store <span class="badge"> {{App\Book::count()}}</span></a>
+                            <a href="{{route('family.create')}}" class="list-group-item"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Book Category <span class="badge"></span>{{App\Family::count()}}</a>
+                            <a href="{{route('author.create')}}" class="list-group-item"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Authors <span class="badge">{{App\Author::count()}}</span></a>
+                            
+                            <a href="{{route('purchase_create')}}" class="list-group-item"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Books Sold <span class="badge">{{App\Purchase::count()}}</span></a>
                             </div>
                             
                             
                         </div>
-                        {{-- <div class="col-md-9">
-                            
-                            <!-- Website Overview -->
-                            <div class="panel panel-default">
-                              <div class="panel-heading main-color-bg">
-                                <h5 class="panel-title">Website Overview</h5>
-                              </div>
-                              <div class="panel-body">
-                                <div class="col-md-3">
-                                    <div class="well dash-box">
-                                        <h2><span class="glyphicon glyphicon-user" aria-hidden="true"></span> {{App\Journal::count()}}</h2>
-                                        <h4>Journals</h4>
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="well dash-box">
-                                        <h2><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> {{App\Published::count()}}</h2>
-                                        <h4>Published</h4>
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="well dash-box">
-                                        <h2><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> {{App\Article::count()}}</h2>
-                                        <h4>To be Published</h4>
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="well dash-box">
-                                        <h2><span class="glyphicon glyphicon-start" aria-hidden="true"></span> 2,3074</h2>
-                                        <h4>Vistors</h4>
-                                    </div>
-                                </div>
-                              </div>
-                            </div>
-                            
-                        </div> --}}
+                        
                         @yield('dashboard')
                     </div>
                 </div>
